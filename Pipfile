@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+ansible = "~=8.2"
+botocore = "*"
+boto3 = "*"
+
+[dev-packages]
+ansible-lint = "~=6.17"
+yamllint = "~=1.32"
+flake8 = "~=6.1"
+
+[requires]
+python_version = "3.10"
