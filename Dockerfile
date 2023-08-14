@@ -15,6 +15,7 @@ WORKDIR /app/
 COPY --from=compiler /ansible/.venv /ansible/.venv
 
 RUN apt update && \
+    apt upgrade -y && \
     apt install -y curl unzip
 
 RUN cd /tmp && \
