@@ -29,13 +29,15 @@ done
 
 printf "Incrementing $updateType version\n"
 newVersion=$(increment_version "$oldVersion" "$updateIndex")
-printf "The new tag will be v$newVersion\n"
 
+printf "\n"
+printf "The new tag will be v$newVersion\n"
 printf "Tag is about to be created"
 for i in {1..4}; do
     printf "."
     sleep 1s
 done
+printf "\n"
 
 git tag "v$newVersion"
 git push origin "v$newVersion"
